@@ -15,4 +15,5 @@ public abstract class Elementomultimediale {
     public void setTitolo(String titolo) {
         this.titolo = titolo;
     }
+
 }

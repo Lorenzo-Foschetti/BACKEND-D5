@@ -42,6 +42,7 @@ public class Video extends Elementomultimediale implements Luminosità, Volume, 
 
     public void setLuminosità(int luminosità) {
         this.luminosità = luminosità;
+        System.out.println("Luminosità impostata a: " + this.luminosità);
     }
 
 
@@ -72,6 +73,7 @@ public class Video extends Elementomultimediale implements Luminosità, Volume, 
 
     public void setVolume(int volume) {
         this.volume = volume;
+        System.out.println("Volume impostato a: " + this.volume);
     }
 
     //override del metodo dell'interfaccia play

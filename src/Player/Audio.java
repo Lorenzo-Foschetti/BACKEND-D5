@@ -9,9 +9,11 @@ public class Audio extends Elementomultimediale implements Volume, Play {
 
     //costruttore
     public Audio(String titolo) {
+
         super(titolo);
         Random rndm = new Random();
         this.volume = rndm.nextInt(1, 100);
+
     }
 
     //override dell'interfaccia Volume
@@ -42,6 +44,7 @@ public class Audio extends Elementomultimediale implements Volume, Play {
 
     public void setVolume(int volume) {
         this.volume = volume;
+        System.out.println("Volume impostato a: " + this.volume);
     }
 
     // override del metodo dell'interfaccia Play
@@ -50,5 +53,20 @@ public class Audio extends Elementomultimediale implements Volume, Play {
         for (int i = 0; i < this.volume; i++) {
             System.out.println("!");
         }
+        //for (int i = 0; i < this.getDurata(); i++) {
+        // System.out.print(this.getTitolo());
+        //}
+
+
+    }
+
+    //getter e setter di durata
+    public int getDurata() {
+        return durata;
+    }
+
+    public void setDurata(int durata) {
+        this.durata = durata;
+        // System.out.println("Il titolo è " + this.getTitolo());
     }
 }

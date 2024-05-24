@@ -19,9 +19,10 @@ public class Immagine extends Elementomultimediale implements Show, Luminosità 
         for (int i = 0; i < this.luminosità; i++) {
             System.out.println("*");
         }
+
     }
 
-    //ovveride del metodo dell'interfaccia Volume
+    //ovveride del metodo dell'interfaccia luminosità
     @Override
     public void aumentaLuminosità() {
         if (this.luminosità == 100) {
@@ -44,5 +45,6 @@ public class Immagine extends Elementomultimediale implements Show, Luminosità 
 
     public void setLuminosità(int luminosità) {
         this.luminosità = luminosità;
+        System.out.println("Luminosità impostata a: " + this.luminosità);
     }
 }
