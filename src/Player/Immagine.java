@@ -1,19 +1,22 @@
 package Player;
 
+import java.util.Random;
+
 public class Immagine extends Elementomultimediale implements Show, Luminosità {
     private int luminosità;
 
     //costruttore
     public Immagine(String titolo) {
         super(titolo);
-        this.luminosità = luminosità;
+        Random rndm = new Random();
+        this.luminosità = rndm.nextInt(1, 100);
     }
 
 
     //override del metodo dell'interfaccia show
     @Override
     public void show() {
-     
+
     }
 
     @Override
