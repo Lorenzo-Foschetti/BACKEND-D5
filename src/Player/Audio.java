@@ -2,7 +2,7 @@ package Player;
 
 import java.util.Random;
 
-public class Audio extends Elementomultimediale implements Volume {
+public class Audio extends Elementomultimediale implements Volume, Play {
     private int volume;
     private int durata;
 
@@ -42,5 +42,13 @@ public class Audio extends Elementomultimediale implements Volume {
 
     public void setVolume(int volume) {
         this.volume = volume;
+    }
+
+    // override del metodo dell'interfaccia Play
+    @Override
+    public void play() {
+        for (int i = 0; i < this.volume; i++) {
+            System.out.println("!");
+        }
     }
 }

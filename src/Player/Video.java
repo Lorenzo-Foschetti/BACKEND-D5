@@ -2,7 +2,7 @@ package Player;
 
 import java.util.Random;
 
-public class Video extends Elementomultimediale implements Luminosità, Volume {
+public class Video extends Elementomultimediale implements Luminosità, Volume, Play {
     private int luminosità;
     private int volume;
     private int durata;
@@ -73,4 +73,19 @@ public class Video extends Elementomultimediale implements Luminosità, Volume {
     public void setVolume(int volume) {
         this.volume = volume;
     }
+
+    //override del metodo dell'interfaccia play
+    @Override
+    public void play() {
+
+        for (int i = 0; i < this.volume; i++) {
+            System.out.println("!");
+        }
+
+        for (int y = 0; y < this.luminosità; y++) {
+            System.out.println("*");
+        }
+    }
+
+
 }
